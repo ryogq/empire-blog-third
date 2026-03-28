@@ -101,16 +101,132 @@ const { title, description, pubDate, updatedDate, heroImage, affiliate } = Astro
 				</div>
 				<slot />
 
-				{affiliate && (
-					<div class="affiliate-card">
-						<span class="tag">AIセレクト</span>
-						<h3>🚀 今日の連動おすすめツール</h3>
-						<p>{affiliate.recommendation}</p>
-						<a href={affiliate.url} target="_blank" class="affiliate-btn">
-							{affiliate.name} を詳しく見る →
-						</a>
+				<div class="luxury-ad">
+					<div class="ad-badge">🏅 整体師監修・睡眠医学に基づく設計</div>
+					<div class="ad-content">
+						<div class="ad-image">
+							<img src="/ads/the-makura.png" alt="THE MAKURA Orthopedic Pillow" />
+						</div>
+						<div class="ad-info">
+							<h2>寝ている間に整体。朝の目覚めが変わる「THE MAKURA」</h2>
+							<p>「朝起きた瞬間から肩が重い…」そんな悩みを寝るだけで解決。一流アスリートも愛用する、特許技術の三段構造があなたの頚椎を理想の形へ導きます。</p>
+							<ul class="features">
+								<li>⭐ 首への負担をゼロにする三段構造</li>
+								<li>⭐ 整体院に通うコストを自宅で削減</li>
+								<li>⭐ 日本で唯一の「整体効果」が認められた枕</li>
+							</ul>
+							<a href="https://px.a8.net/svt/ejp?a8mat=4AZQGT+45FTMA+4GZK+5ZEMQ" target="_blank" class="luxury-btn">
+								THE MAKURA を公式サイトで詳しく見る →
+							</a>
+							<span class="ad-disclaimer">※本サイトはAIが最新ニュースを要約し、関連性の高い商品をご紹介しています。</span>
+						</div>
 					</div>
-				)}
+				</div>
+
+				<style>
+					.luxury-ad {
+						margin-top: 5rem;
+						background: rgba(255, 255, 255, 0.03);
+						backdrop-filter: blur(20px);
+						border: 1px solid rgba(255, 255, 255, 0.1);
+						border-radius: 40px;
+						padding: 3rem;
+						position: relative;
+						overflow: hidden;
+						box-shadow: 0 40px 100px rgba(0,0,0,0.5);
+					}
+					.ad-badge {
+						position: absolute;
+						top: 1.5rem;
+						right: 1.5rem;
+						background: linear-gradient(135deg, #fbbf24, #d97706);
+						color: black;
+						padding: 0.4rem 1.2rem;
+						border-radius: 50px;
+						font-size: 0.8rem;
+						font-weight: 800;
+						z-index: 2;
+					}
+					.ad-content {
+						display: grid;
+						grid-template-columns: 1fr 1.5fr;
+						gap: 3rem;
+						align-items: center;
+					}
+					.ad-image img {
+						width: 100%;
+						border-radius: 24px;
+						box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+						transition: transform 0.3s ease;
+					}
+					.ad-image img:hover {
+						transform: scale(1.05);
+					}
+					.ad-info h2 {
+						font-size: 2rem;
+						margin: 0 0 1.5rem 0;
+						color: white;
+						line-height: 1.2;
+					}
+					.ad-info p {
+						font-size: 1rem;
+						color: var(--text-muted);
+						margin-bottom: 2rem;
+					}
+					.features {
+						list-style: none;
+						padding: 0;
+						margin: 0 0 2.5rem 0;
+						display: flex;
+						flex-direction: column;
+						gap: 0.8rem;
+					}
+					.features li {
+						font-size: 0.95rem;
+						color: #cbd5e1;
+						display: flex;
+						align-items: center;
+					}
+					.luxury-btn {
+						display: block;
+						text-align: center;
+						padding: 1.5rem;
+						background: linear-gradient(135deg, #10b981, #059669);
+						color: white;
+						border-radius: 20px;
+						font-weight: 800;
+						font-size: 1.1rem;
+						text-decoration: none;
+						transition: all 0.3s ease;
+						box-shadow: 0 15px 30px rgba(16, 185, 129, 0.3);
+					}
+					.luxury-btn:hover {
+						transform: translateY(-5px);
+						box-shadow: 0 20px 40px rgba(16, 185, 129, 0.4);
+					}
+					.ad-disclaimer {
+						display: block;
+						margin-top: 1.5rem;
+						font-size: 0.75rem;
+						color: #64748b;
+						text-align: center;
+					}
+
+					@media (max-width: 768px) {
+						.ad-content {
+							grid-template-columns: 1fr;
+							text-align: center;
+						}
+						.ad-badge {
+							position: static;
+							display: inline-block;
+							margin-bottom: 1.5rem;
+						}
+						.features li {
+							justify-content: center;
+						}
+					}
+				</style>
 			</article>
 		</main>
 		<Footer />

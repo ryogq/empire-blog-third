@@ -75,6 +75,104 @@ const posts = (await getCollection('blog')).sort(
 	<body>
 		<Header />
 		<main>
+			<section class="featured-product">
+				<div class="luxury-ad-mini">
+					<div class="ad-badge">🥇 整体師が選ぶ枕 No.1</div>
+					<div class="ad-content-mini">
+						<div class="ad-image-mini">
+							<img src="/ads/the-makura.png" alt="THE MAKURA" />
+						</div>
+						<div class="ad-info-mini">
+							<h2>寝るだけ整体。「THE MAKURA」で人生最高の目覚めを。</h2>
+							<p>一流アスリートも認めた、頚椎を理想の形へ導く唯一の枕。</p>
+							<a href="https://px.a8.net/svt/ejp?a8mat=4AZQGT+45FTMA+4GZK+5ZEMQ" target="_blank" class="luxury-btn-mini">
+								今すぐ公式サイトで確認する →
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<style>
+				.featured-product {
+					margin-bottom: 4rem;
+				}
+				.luxury-ad-mini {
+					background: rgba(255, 255, 255, 0.03);
+					backdrop-filter: blur(20px);
+					border: 1px solid rgba(255, 255, 255, 0.1);
+					border-radius: 40px;
+					padding: 2rem 3rem;
+					position: relative;
+					overflow: hidden;
+					box-shadow: 0 40px 100px rgba(0,0,0,0.5);
+				}
+				.ad-badge {
+					position: absolute;
+					top: 1rem;
+					right: 1rem;
+					background: linear-gradient(135deg, #fbbf24, #d97706);
+					color: black;
+					padding: 0.3rem 1rem;
+					border-radius: 50px;
+					font-size: 0.75rem;
+					font-weight: 800;
+				}
+				.ad-content-mini {
+					display: grid;
+					grid-template-columns: 120px 1fr;
+					gap: 2rem;
+					align-items: center;
+				}
+				.ad-image-mini img {
+					width: 120px;
+					height: 120px;
+					object-fit: cover;
+					border-radius: 20px;
+					box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+				}
+				.ad-info-mini h2 {
+					font-size: 1.5rem;
+					margin: 0 0 0.5rem 0;
+					color: white;
+				}
+				.ad-info-mini p {
+					font-size: 0.9rem;
+					color: var(--text-muted);
+					margin-bottom: 1rem;
+				}
+				.luxury-btn-mini {
+					display: inline-block;
+					padding: 0.8rem 1.5rem;
+					background: linear-gradient(135deg, #10b981, #059669);
+					color: white;
+					border-radius: 12px;
+					font-weight: 700;
+					font-size: 0.9rem;
+					text-decoration: none;
+					transition: all 0.3s ease;
+				}
+				.luxury-btn-mini:hover {
+					transform: translateY(-3px);
+					box-shadow: 0 10px 20px rgba(16, 185, 129, 0.3);
+				}
+
+				@media (max-width: 600px) {
+					.ad-content-mini {
+						grid-template-columns: 1fr;
+						text-align: center;
+					}
+					.ad-image-mini {
+						display: none;
+					}
+					.ad-badge {
+						position: static;
+						display: inline-block;
+						margin-bottom: 1rem;
+					}
+				}
+			</style>
+
 			<section>
 				<ul class="post-grid">
 					{
