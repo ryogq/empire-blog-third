@@ -1,0 +1,14 @@
+{
+  "niche": "快眠・睡眠テクノロジー",
+  "language": "ja",
+  "sources": [
+    {
+      "name": "GoogleNews - 睡眠・整体",
+      "url": "https://news.google.com/rss/search?q=%E7%9D%A1%E7%9C%A0+%E6%95%B4%E4%BD%93&hl=ja&gl=JP&ceid=JP:ja"
+    },
+    {
+      "name": "GoogleNews - 快眠テクノロジー",
+      "url": "https://news.google.com/rss/search?q=%E5%BF%AB%E7%9C%A0+%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC&hl=ja&gl=JP&ceid=JP:ja"
+    }
+  ]
+}
